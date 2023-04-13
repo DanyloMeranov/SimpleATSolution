@@ -31,8 +31,7 @@ namespace SignInTests
                 if (navigate)
                     page.NavigateNew(external: external);
             }
-            catch (Exception e)
-            {
+            catch {
                 page.Page.AddElmahDetail();
                 throw;
             }

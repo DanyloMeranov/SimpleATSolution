@@ -937,29 +937,19 @@ return ret.length > 0 ? ret : null", node);
             element.JsClick();
             element.Pause();
             Browser.WaitForReadyState(emptyform, jQ);
-            if (ConfigSettingsReader.DebugLvl == 1)
-                try
-                {
-                    //Driver.Report.StartStep($"After click2 cookie: '{Browser.GetCookies()}'");
-                    //AllureNextReport.FinishStep();
-                }
-                catch { }
         }
 
         public static Actions MoveToElement(this IWebElement element)
         {
             try
             {
-                //Driver.Report.StartStep("Moving screen to the element");
                 Assert.IsNotNull(element, "Web element for movings to was not found.");
                 var actions = new Actions(Browser);
                 var result = actions.MoveToElement(element);
-                //AllureNextReport.FinishStep();
                 return result;
             }
-            catch (Exception e)
+            catch
             {
-                //Driver.Report.LogFailedStepWithFailedTestCase(e);
                 throw;
             }
         }

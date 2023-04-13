@@ -340,7 +340,7 @@ namespace BasePage
                     FillFilterSection(filterLines);
                     done = true;
                 }
-                catch (Exception e)
+                catch 
                 {
                     if (--tries < 0)
                     {
@@ -841,7 +841,7 @@ namespace BasePage
                 FinishStep();
                 //}
             }
-            catch (Exception e)
+            catch 
             {
                 Page.AddElmahDetail("filterconfigurationtab");
                 throw;
@@ -861,8 +861,7 @@ namespace BasePage
                     DeleteView(null, viewName);
                 }
             }
-            catch (Exception e)
-            {
+            catch {
                 //Driver.Report.LogFailedStepWithFailedTestCase(e);
                 Page.AddElmahDetail("layoutconfigurationtab");
                 throw;
@@ -2360,7 +2359,7 @@ namespace BasePage
                 else
                     FillEntityCard(purpose, useReversedCard);
             }
-            catch (Exception e)
+            catch
             {
                 if (!Page.CheckErrorRequest()) throw;
                 if (tries < 1)
@@ -2940,7 +2939,7 @@ namespace BasePage
             {
                 Page.RunProcess(arName, TestUserName, module, columnName);
             }
-            catch (Exception e)
+            catch
             {
                 Page.AddElmahDetail();
                 return false;
@@ -2980,7 +2979,7 @@ namespace BasePage
                     }
                 }
             }
-            catch (Exception e)
+            catch
             {
                 Page.AddElmahDetail();
                 return false;

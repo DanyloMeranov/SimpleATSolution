@@ -115,8 +115,7 @@ namespace SignInTests
                     FinishStep();//try again
                 }
             }
-            catch (Exception e)
-            {
+            catch {
                 page.Page.AddElmahDetail();
                 throw;
             }

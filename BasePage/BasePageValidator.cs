@@ -47,8 +47,7 @@ namespace BasePage
                 }
 
             }
-            catch (Exception e)
-            {
+            catch {
                 throw;
             }
         }
@@ -71,7 +70,7 @@ namespace BasePage
                     Assert.Fail("Values were found in table!");
                 }
             }
-            catch (Exception e)
+            catch 
             {
                 throw;
             }
@@ -104,8 +103,7 @@ namespace BasePage
                 }
                 Page.First();
             }
-            catch (Exception e)
-            {
+            catch {
                 throw;    // it is for the test failed, without it test continues execution after error
             }
         }
@@ -135,8 +133,7 @@ namespace BasePage
                 }
                 return j;
             }
-            catch (Exception e)
-            {
+            catch {
                 throw;
             }
         }
@@ -163,8 +160,7 @@ namespace BasePage
 
                 return j;
             }
-            catch (Exception e)
-            {
+            catch {
                 throw;
             }
         }
@@ -192,8 +188,7 @@ namespace BasePage
 
                 //WebDriver.WaitForReadyState();
             }
-            catch (Exception e)
-            {
+            catch {
                 throw;
             }
         }
@@ -237,8 +232,7 @@ namespace BasePage
 
                 return i - (checkTheCheckbox ? 0 : 1);
             }
-            catch (Exception e)
-            {
+            catch {
                 throw;
             }
         }

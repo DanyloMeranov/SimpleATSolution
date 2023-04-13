@@ -86,8 +86,7 @@ namespace BaseTests
                 TestDriver = Driver.Instance.Browser;
                 TestDriverWait = Driver.Instance.BrowserWait;
             }
-            catch(Exception e)
-            {
+            catch{
                 //Report.LogFailedStepWithFailedTestCase(e);
                 throw;
             }
@@ -186,8 +185,7 @@ namespace BaseTests
                 DataValue = DataDictionaryCollection.ToArray()[index];
                 return DataDictionaryCollection.Count;
             }
-            catch (Exception e)
-            {
+            catch {
                 //Driver.Report.LogFailedStepWithFailedTestCase(e);
                 throw;
             }
